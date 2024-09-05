@@ -1,5 +1,5 @@
 function loadHTML(filename) {
-    fetch(`content/${filename}`)
+    fetch(`build_content/${filename}`)
         .then(response => response.text())
         .then(htmlContent => {
             document.getElementById('content').innerHTML = htmlContent;
