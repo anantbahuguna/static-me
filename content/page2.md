@@ -1,4 +1,4 @@
-## This is a sample 2
+## This is a sample 2 updated
 
 A nice **sample** markdown page
 
