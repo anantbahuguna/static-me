@@ -2,4 +2,7 @@
 
 A nice **sample** markdown page
 
-    Here goes some code
+```
+    const x = "1";
+    console.log(x);
+```
