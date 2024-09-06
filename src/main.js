@@ -1,3 +1,5 @@
+import './style.css'
+
 // Function to load HTML content dynamically
 export function loadContent(file) {
   fetch(`content/${file}`)
