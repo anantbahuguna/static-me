@@ -1,14 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Static ME</title>
   </head>
   <body>
-    <header class="bg-blue-500 text-white p-4">
-      <h1 class="text-2xl">WELCOME</h1>
-    </header>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 fixed top-0 w-full">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo or Brand Name -->
+        <div class="text-white text-lg font-bold">MyPortfolio</div>
+        <!-- Navbar Links -->
+        <div class="space-x-6">
+          <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+          <a href="#projects" class="text-gray-300 hover:text-white"
+            >Projects</a
+          >
+          <a href="#experience" class="text-gray-300 hover:text-white"
+            >Experience</a
+          >
+          <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
+          <a href="#about" class="text-gray-300 hover:text-white">About Me</a>
+          <a href="#resume" class="text-gray-300 hover:text-white">Resume</a>
+        </div>
+      </div>
+    </nav>
+    <div class="main overflow-y-scroll snap-y snap-mandatory">
+      <!-- Content Sections (for navigation links) -->
+      <section
+        id="home"
+        class="h-screen bg-white flex items-center justify-center snap-start"
+      >
+        <h1 class="text-3xl">Welcome to My Portfolio</h1>
+      </section>
+
+      <section
+        id="projects"
+        class="h-screen bg-gray-100 flex items-center justify-center snap-start"
+      >
+        <h1 class="text-3xl">Projects</h1>
+      </section>
+
+      <section
+        id="experience"
+        class="h-screen bg-white flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Experience</h1>
+      </section>
+
+      <section
+        id="skills"
+        class="h-screen bg-gray-100 flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Skills</h1>
+      </section>
+
+      <section
+        id="about"
+        class="h-screen bg-white flex items-center justify-center"
+      >
+        <h1 class="text-3xl">About Me</h1>
+      </section>
+
+      <section
+        id="resume"
+        class="h-screen bg-gray-100 flex items-center justify-center"
+      >
+        <h1 class="text-3xl">Resume</h1>
+      </section>
+    </div>
     <nav>
       <ul>
         <li><a href="#" id="page-1-link">Page 1</a></li>
