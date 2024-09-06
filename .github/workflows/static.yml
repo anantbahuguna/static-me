@@ -29,24 +29,40 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the latest code from the main branch
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node
+
+      # Step 2: Set up Node.js (using version 20 in your case)
+      - name: Set up Node.js
         uses: actions/setup-node@v4
-        with: 
+        with:
           node-version: 20
           cache: 'npm'
+
+      # Step 3: Install Pandoc
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
+      # Step 4: Install npm dependencies
       - name: Install dependencies
         run: npm ci
-      - name: Build
+
+      # Step 5: Run the build process (includes running convert.js for markdown conversion)
+      - name: Build the project
         run: npm run build
+
+      # Step 6: Configure Pages for deployment
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # Step 7: Upload the 'dist' folder to GitHub Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder
           path: './dist'
+
+      # Step 8: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
